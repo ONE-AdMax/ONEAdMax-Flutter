@@ -1,0 +1,58 @@
+group = "one_admax_flutter"
+version = "1.0"
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.3.0")
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven{
+            url "https://repo.onestore.co.kr/repository/onestore-sdk-public"
+        }
+    }
+}
+
+apply plugin: "com.android.library"
+
+android {
+    if (project.android.hasProperty("namespace")) {
+        namespace = "com.onestorecorp.sdk.java"
+    }
+
+    compileSdk = 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdk = 24
+    }
+
+    dependencies {
+        testImplementation("junit:junit:4.13.2")
+        testImplementation("org.mockito:mockito-core:5.0.0")
+        implementation 'com.oneadmax.sdk:sdk-ads:1.2.0'
+    }
+
+    testOptions {
+        unitTests.all {
+            testLogging {
+               events "passed", "skipped", "failed", "standardOut", "standardError"
+               outputs.upToDateWhen {false}
+               showStandardStreams = true
+            }
+        }
+    }
+}

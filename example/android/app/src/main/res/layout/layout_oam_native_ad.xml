@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/oam_native_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon_image_view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/desc_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cta_text_view"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:background="#3d7caf"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <!-- 1200 x 628 -->
+    <ImageView
+        android:id="@+id/main_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#ffffff" />
+
+</LinearLayout>

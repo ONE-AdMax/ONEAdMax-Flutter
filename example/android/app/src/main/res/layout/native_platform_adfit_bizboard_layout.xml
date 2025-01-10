@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oneadmax.global.OAMNative xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/OAMNative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/include_oneadmax_native_ad"
+        layout="@layout/layout_oam_native_ad" />
+
+    <com.kakao.adfit.ads.na.AdFitBizBoardAdTemplateLayout
+        android:id="@+id/adfit_bizboard_native_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</com.oneadmax.global.OAMNative>
+
+

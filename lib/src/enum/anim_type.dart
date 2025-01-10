@@ -1,0 +1,9 @@
+enum AnimType {
+  NONE,
+  FADE_IN,
+  SLIDE_LEFT,
+  SLIDE_RIGHT,
+  TOP_SLIDE,
+  BOTTOM_SLIDE,
+  CIRCLE;
+}
