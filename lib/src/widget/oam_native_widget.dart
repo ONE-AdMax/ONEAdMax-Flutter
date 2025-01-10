@@ -6,14 +6,14 @@ class OAMNativeWidget extends StatefulWidget {
   final String placementId;
   final NativeCallBackListener callback;
   final String factoryId;
-  late final OAMNative _nativePlugin;
+  late final OAMNative nativePlugin;
 
   OAMNativeWidget(
       {super.key,
       required this.placementId,
       required this.callback,
       required this.factoryId}) {
-    _nativePlugin = OAMNative(callback);
+    nativePlugin = OAMNative(callback);
   }
 
   @override
