@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
 
+import '../const/oamPlacementIds.dart';
 import '../model/mediation.dart';
 import 'mediation_viewmodel.dart';
 
@@ -37,10 +39,7 @@ class InterstitialAdViewModel extends StateNotifier<InterstitialAdState> {
 
     switch (mediation) {
       case Mediation.pure:
-        interstitialPlacementId = "ONESTORE_INTERSTITIAL";
-        break;
-      case Mediation.adFit:
-        state = state.copyWith(isNotSupport: true);
+        interstitialPlacementId = OamPlacementIds.INTERSTITIAL_ID;
         break;
       case Mediation.mobon:
         state = state.copyWith(isNotSupport: true);
@@ -48,11 +47,11 @@ class InterstitialAdViewModel extends StateNotifier<InterstitialAdState> {
       case Mediation.mezzo:
         state = state.copyWith(isNotSupport: true);
         break;
-      case Mediation.caluly:
-        interstitialPlacementId = "p5hKWt7wUAz951W";
+      case Mediation.cauly:
+        interstitialPlacementId = dotenv.env['CAULY_INTERSTITIAL_PLACEMENT_ID']!;
         break;
       case Mediation.unityAds:
-        interstitialPlacementId = "NdLcdsbuDEffITU";
+        interstitialPlacementId = dotenv.env['UNITYADS_INTERSTITIAL_PLACEMENT_ID']!;
         break;
       case Mediation.vungle:
         state = state.copyWith(isNotSupport: true);

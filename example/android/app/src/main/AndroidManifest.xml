@@ -43,7 +43,7 @@
         <!-- ONEAdMax app key -->
         <meta-data
             android:name="com.oneadmax.global.appkey"
-            android:value="466125395" />
+            android:value="${appKey}" />
 
     </application>
     <!-- Required to query activities that can process text, see:

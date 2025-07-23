@@ -7,18 +7,17 @@ class MediationState {
 
   final Mediation mediation;
 
-  copyWith({String? appKey, Mediation? mediation}) => MediationState(
+  copyWith({Mediation? mediation}) => MediationState(
         mediation: mediation ?? this.mediation,
       );
 }
 
 class MediationViewModel extends StateNotifier<MediationState> {
   MediationViewModel()
-      : super(const MediationState(mediation: Mediation.adFit));
+      : super(const MediationState(mediation: Mediation.mobon));
 
   void setMediation(Mediation mediation) {
-    final appKey = (mediation == Mediation.pure) ? "938555472" : "466125395";
-    state = state.copyWith(mediation: mediation, appKey: appKey);
+    state = state.copyWith(mediation: mediation);
   }
 }
 

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
+import 'package:one_admax_flutter_example/const/oamPlacementIds.dart';
 import 'package:one_admax_flutter_example/widget/banner_header.dart';
-
-import '../const/oam_const.dart';
 
 class NativeTemplateDetail extends StatefulWidget {
   const NativeTemplateDetail({super.key});
@@ -23,19 +22,19 @@ class _NativeTemplateDetailState extends State<NativeTemplateDetail> {
       ),
       body: ListView(children: [
         ...nativeTemplateDetail(
-            NATIVE_TEMPLATE_1, 'plugin/native_template_widget'),
+            OamPlacementIds.NATIVE_TEMPLATE_1, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            NATIVE_TEMPLATE_2, 'plugin/native_template_widget'),
+            OamPlacementIds.NATIVE_TEMPLATE_2, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            NATIVE_TEMPLATE_3, 'plugin/native_template_widget'),
+            OamPlacementIds.NATIVE_TEMPLATE_3, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            NATIVE_TEMPLATE_4, 'plugin/native_template_widget'),
+            OamPlacementIds.NATIVE_TEMPLATE_4, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            NATIVE_TEMPLATE_5, 'plugin/native_template_widget'),
+            OamPlacementIds.NATIVE_TEMPLATE_5, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            NATIVE_TEMPLATE_6, 'plugin/native_template_widget'),
+            OamPlacementIds.NATIVE_TEMPLATE_6, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            NATIVE_TEMPLATE_7, 'plugin/native_template_widget'),
+            OamPlacementIds.NATIVE_TEMPLATE_7, 'plugin/native_template_widget'),
         ..._logList.map((e) => _buildLog(e)).toList(),
       ]),
     );

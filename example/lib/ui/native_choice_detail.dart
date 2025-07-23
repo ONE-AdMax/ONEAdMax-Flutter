@@ -14,7 +14,6 @@ class NativeChoiceDetail extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(mediationProvider);
-    final viewModel = ref.read(nativePlatformProvider.notifier);
 
     switch (state.mediation) {
       case Mediation.pure:
@@ -24,20 +23,6 @@ class NativeChoiceDetail extends ConsumerWidget {
           secondButtonTitle: 'Pure Template Ad',
           firstButtonClicked: () => context.go('/native/platform'),
           secondButtonClicked: () => context.go('/native/template'),
-        );
-      case Mediation.adFit:
-        return ChoiceWidget(
-          title: 'Native Ad',
-          firstButtonTitle: 'Platform Ad',
-          secondButtonTitle: 'Biz Template Ad',
-          firstButtonClicked: () {
-            viewModel.changeMediationNative(MediationNative.adfit());
-            context.go('/native/platform');
-          },
-          secondButtonClicked: () {
-            viewModel.changeMediationNative(MediationNative.adfittemplate());
-            context.go('/native/platform');
-          },
         );
       default:
         // 기본 케이스에서 기본 페이지로 이동한 후 빈 컨테이너를 반환합니다.

@@ -9,7 +9,6 @@ import com.gaa.sdk.base.Logger;
 import com.oneadmax.global.OAMError;
 import com.oneadmax.global.OAMNative;
 import com.oneadmax.global.listener.IOAMNativeEventListener;
-import com.oneadmax.global.viewbinder.AdFitViewBinder;
 import com.oneadmax.global.viewbinder.AppLovinMaxViewBinder;
 import com.oneadmax.global.viewbinder.MobonViewBinder;
 import com.oneadmax.global.viewbinder.OAMViewBinder;
@@ -38,9 +37,7 @@ public class OAMNativeAdPlatformView implements PlatformView, IOAMNativeEventLis
         oamNative.setEventListener(this);
         oamNative.setViewBinder(oamViewBinder);
 
-        if (mediationViewBinder instanceof AdFitViewBinder) {
-            oamNative.setAdFitViewBinder((AdFitViewBinder) mediationViewBinder);
-        } else if (mediationViewBinder instanceof AppLovinMaxViewBinder) {
+        if (mediationViewBinder instanceof AppLovinMaxViewBinder) {
             oamNative.setAppLovinMaxViewBinder((AppLovinMaxViewBinder) mediationViewBinder);
         } else if (mediationViewBinder instanceof MobonViewBinder) {
             oamNative.setMobonViewBinder((MobonViewBinder) mediationViewBinder);

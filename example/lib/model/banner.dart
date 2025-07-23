@@ -1,4 +1,6 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
+import 'package:one_admax_flutter_example/const/oamPlacementIds.dart';
 
 class Banner {
   final String title;
@@ -16,52 +18,37 @@ class Banner {
 final List<Banner> pureBanners = [
   Banner(
       title: "320x50",
-      placementId: "ONESTORE_BANNER_320x50",
+      placementId: OamPlacementIds.BANNER_ID_320x50,
       bannerSize: BannerSize.BANNER_320x50),
   Banner(
       title: "320x100",
-      placementId: "ONESTORE_BANNER_320x100",
+      placementId: OamPlacementIds.BANNER_ID_320x100,
       bannerSize: BannerSize.BANNER_320x100),
   Banner(
       title: "300x250",
-      placementId: "ONESTORE_BANNER_300x250",
-      bannerSize: BannerSize.BANNER_300x250),
-];
-
-final List<Banner> adfitBanners = [
-  Banner(
-      title: "320x50",
-      placementId: "F9z0waYJDr1uRTC",
-      bannerSize: BannerSize.BANNER_320x50),
-  Banner(
-      title: "320x100",
-      placementId: "ZzyLXVsaiJy4bXL",
-      bannerSize: BannerSize.BANNER_320x100),
-  Banner(
-      title: "300x250",
-      placementId: "ywYVp0SkXLVJaPC",
+      placementId: OamPlacementIds.BANNER_ID_300x250,
       bannerSize: BannerSize.BANNER_300x250),
 ];
 
 final List<Banner> mobonBanners = [
   Banner(
       title: "320x50",
-      placementId: "WvVMKWUxn49yYx8",
+      placementId: dotenv.env['MOBON_BANNER_PLACEMENT_ID_320_50']!,
       bannerSize: BannerSize.BANNER_320x50),
   Banner(
       title: "320x100",
-      placementId: "op3H3BilGvq97Gf",
+      placementId: dotenv.env['MOBON_BANNER_PLACEMENT_ID_320_100']!,
       bannerSize: BannerSize.BANNER_320x100),
   Banner(
       title: "300x250",
-      placementId: "ywYVp0SkXLVJaPC",
+      placementId: dotenv.env['MOBON_BANNER_PLACEMENT_ID_300_250']!,
       bannerSize: BannerSize.BANNER_300x250),
 ];
 
 final List<Banner> mezzoBanners = [
   Banner(
       title: "320x50",
-      placementId: "geJJbgrtjSqX5Ci",
+      placementId: dotenv.env['MEZZO_BANNER_PLACEMENT_ID_320_50']!,
       bannerSize: BannerSize.BANNER_320x50,
       bannerMediationExtras: MezzoExtras(
           ageLevel: 1,
@@ -69,41 +56,41 @@ final List<Banner> mezzoBanners = [
           storeUrl: "https://dev.onestore.net/devpoc/index.omp")),
   Banner(
       title: "320x100",
-      placementId: "285kLtYUAcHJQvY",
+      placementId: dotenv.env['MEZZO_BANNER_PLACEMENT_ID_320_100']!,
       bannerSize: BannerSize.BANNER_320x100),
   Banner(
       title: "300x250",
-      placementId: "93PSNaJXhT2LCIL",
+      placementId: dotenv.env['MEZZO_BANNER_PLACEMENT_ID_300_250']!,
       bannerSize: BannerSize.BANNER_300x250),
 ];
 
 final List<Banner> caulyBanners = [
   Banner(
       title: "320x50",
-      placementId: "e7XQ6rkO0D1cg3p",
+      placementId: dotenv.env['CAULY_BANNER_PLACEMENT_ID_320_50']!,
       bannerSize: BannerSize.BANNER_320x50,
       bannerMediationExtras: CaulyExtras(isEnableDynamicReloadInterval: false)),
   Banner(
       title: "320x100",
-      placementId: "9mG2udG9XRg0HoM",
+      placementId: dotenv.env['CAULY_BANNER_PLACEMENT_ID_320_100']!,
       bannerSize: BannerSize.BANNER_320x100),
   Banner(
       title: "300x250",
-      placementId: "WQxmVVeJNId4UnH",
+      placementId: dotenv.env['CAULY_BANNER_PLACEMENT_ID_300_250']!,
       bannerSize: BannerSize.BANNER_300x250),
 ];
 
 final List<Banner> unityAdBanners = [
   Banner(
       title: "320x50",
-      placementId: "dDiKB74RZCP5Tp2",
+      placementId: dotenv.env['UNITYADS_BANNER_PLACEMENT_ID_320_50']!,
       bannerSize: BannerSize.BANNER_320x50),
   Banner(
       title: "320x100",
-      placementId: "zzKPri2tu1We5km",
+      placementId: dotenv.env['UNITYADS_BANNER_PLACEMENT_ID_320_100']!,
       bannerSize: BannerSize.BANNER_320x100),
   Banner(
       title: "300x250",
-      placementId: "mUFRJESPbDgP7d2",
+      placementId: dotenv.env['UNITYADS_BANNER_PLACEMENT_ID_300_250']!,
       bannerSize: BannerSize.BANNER_300x250),
 ];

@@ -10,16 +10,13 @@ class BannerDetailViewmodel extends StateNotifier<BannerDetailState> {
       case Mediation.pure:
         state = state.copyWith(bannerList: pureBanners);
         break;
-      case Mediation.adFit:
-        state = state.copyWith(bannerList: adfitBanners);
-        break;
       case Mediation.mobon:
         state = state.copyWith(bannerList: mobonBanners);
         break;
       case Mediation.mezzo:
         state = state.copyWith(bannerList: mezzoBanners);
         break;
-      case Mediation.caluly:
+      case Mediation.cauly:
         state = state.copyWith(bannerList: caulyBanners);
         break;
       case Mediation.unityAds:

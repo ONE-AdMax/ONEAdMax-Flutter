@@ -1,5 +1,7 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
+import 'package:one_admax_flutter_example/const/oamPlacementIds.dart';
 import 'package:one_admax_flutter_example/model/mediation.dart';
 
 import 'mediation_viewmodel.dart';
@@ -12,10 +14,7 @@ class RewardDetailViewModel extends StateNotifier<RewardDetailState> {
 
     switch (mediation) {
       case Mediation.pure:
-        rewardPlacementId = "ONESTORE_REWARD_VIDEO";
-        break;
-      case Mediation.adFit:
-        state = state.copyWith(isNotSupport: true);
+        rewardPlacementId = OamPlacementIds.REWARD_ID;
         break;
       case Mediation.mobon:
         state = state.copyWith(isNotSupport: true);
@@ -23,20 +22,20 @@ class RewardDetailViewModel extends StateNotifier<RewardDetailState> {
       case Mediation.mezzo:
         state = state.copyWith(isNotSupport: true);
         break;
-      case Mediation.caluly:
+      case Mediation.cauly:
         state = state.copyWith(isNotSupport: true);
         break;
       case Mediation.unityAds:
-        rewardPlacementId = "kr7YBJux8Z3OTit";
+        rewardPlacementId = dotenv.env['UNITYADS_REWARD_VIDEO_PLACEMENT_ID']!;
         break;
       case Mediation.vungle:
-        rewardPlacementId = "OOgo01lmr7a5q3l";
+        rewardPlacementId = dotenv.env['VUNGLE_REWARD_VIDEO_PLACEMENT_ID']!;
         break;
       case Mediation.applovinBidding:
-        rewardPlacementId = "nPpOCmjEPjPa64c";
+        rewardPlacementId = dotenv.env['APPLOVIN_BIDDING_REWARD_VIDEO_PLACEMENT_ID']!;
         break;
       case Mediation.applovinWaterfall:
-        rewardPlacementId = "SyFiIGfLAGm05xP";
+        rewardPlacementId = dotenv.env['APPLOVIN_WATERFALL_REWARD_VIDEO_PLACEMENT_ID']!;
         break;
     }
 

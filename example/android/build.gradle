@@ -2,12 +2,20 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven{
+
+        // OneStore SDK repository (needed for com.oneadmax.sdk:sdk-ads)
+        maven {
             url "https://repo.onestore.co.kr/repository/onestore-sdk-public"
         }
 
+        // Cauly SDK repository (for mediation)
         maven {
-            url 'https://devrepo.kakao.com/nexus/content/groups/public/'
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/cauly/Android-SDK/SDK")
+            credentials {
+                username = 'cauly'
+                password = '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'
+            }
         }
 
     }

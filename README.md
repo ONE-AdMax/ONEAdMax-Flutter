@@ -14,8 +14,8 @@ For more information, refer to the [**ONE AdMax Developer Guides**](https://one-
 
 Before you start using the ONE AdMax SDK, make sure to follow these steps:
 
-- [How to obtain a Media Key in ONE AdMax](https://one-admax-organization.gitbook.io/one-admax-sdk/appkey)
-- [How to obtain a Placement Key in ONE AdMax](https://one-admax-organization.gitbook.io/one-admax-sdk/placementid)
+- [How to obtain a Media Key in ONE AdMax](https://one-admax-organization.gitbook.io/one-admax-sdk/01.)
+- [How to obtain a Placement Key in ONE AdMax](https://one-admax-organization.gitbook.io/one-admax-sdk/02.)
 
 ### Installation
 
@@ -31,7 +31,7 @@ Alternatively, you can manually add the dependency to your pubspec.yaml:
 
 ```yaml
 dependencies:
-  one_admax_flutter: ^1.0.2
+  one_admax_flutter: ^1.0.3
 
 ```
 
@@ -74,7 +74,7 @@ import 'package:one_admax_flutter/one_admax_flutter.dart';
 - [Flutter-Plugin Guide](https://one-admax-organization.gitbook.io/one-admax-sdk/05.-flutter-plugin-guide)
 - [보상형 비디오 광고 for Flutter](https://one-admax-organization.gitbook.io/one-admax-sdk/05.-flutter-plugin-guide/5-1.-for-flutter)
 - [전면 광고 for Flutter](https://one-admax-organization.gitbook.io/one-admax-sdk/05.-flutter-plugin-guide/interstitial)
-- [전면 비디오 광고 구현하기](https://one-admax-organization.gitbook.io/one-admax-sdk/05.-flutter-plugin-guide/5-3.)
+- [배너 광고 구현하기](https://one-admax-organization.gitbook.io/one-admax-sdk/05.-flutter-plugin-guide/5-3.)
 - [전면 비디오 광고 for Flutter (비보상형)](https://one-admax-organization.gitbook.io/one-admax-sdk/05.-flutter-plugin-guide/5-4.-for-flutter)
 
 ## Android Proguard Rules

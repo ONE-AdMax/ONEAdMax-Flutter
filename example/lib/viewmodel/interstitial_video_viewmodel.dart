@@ -1,6 +1,8 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
 
+import '../const/oamPlacementIds.dart';
 import '../model/mediation.dart';
 import 'mediation_viewmodel.dart';
 
@@ -37,10 +39,7 @@ class InterstitialVideoViewModel extends StateNotifier<InterstitialVideoState> {
 
     switch (mediation) {
       case Mediation.pure:
-        interstitialVideoPlacementId = "ONESTORE_VIDEO";
-        break;
-      case Mediation.adFit:
-        state = state.copyWith(isNotSupport: true);
+        interstitialVideoPlacementId = OamPlacementIds.INTERSTITIAL_VIDEO_ID;
         break;
       case Mediation.mobon:
         state = state.copyWith(isNotSupport: true);
@@ -48,20 +47,20 @@ class InterstitialVideoViewModel extends StateNotifier<InterstitialVideoState> {
       case Mediation.mezzo:
         state = state.copyWith(isNotSupport: true);
         break;
-      case Mediation.caluly:
+      case Mediation.cauly:
         state = state.copyWith(isNotSupport: true);
         break;
       case Mediation.unityAds:
-        interstitialVideoPlacementId = "ReQby5YWpsjNIQr";
+        interstitialVideoPlacementId = dotenv.env['UNITYADS_INTERSTITIAL_VIDEO_PLACEMENT_ID']!;
         break;
       case Mediation.vungle:
-        interstitialVideoPlacementId = "vyUk0fucyrdsMd3";
+        interstitialVideoPlacementId = dotenv.env['VUNGLE_INTERSTITIAL_VIDEO_PLACEMENT_ID']!;
         break;
       case Mediation.applovinBidding:
-        interstitialVideoPlacementId = "yOmsZIftBBZZXD8";
+        interstitialVideoPlacementId = dotenv.env['APPLOVIN_BIDDING_INTERSTITIAL_VIDEO_PLACEMENT_ID']!;
         break;
       case Mediation.applovinWaterfall:
-        interstitialVideoPlacementId = "Dx3gTL8mZAdpOrg";
+        interstitialVideoPlacementId = dotenv.env['APPLOVIN_WATERFALL_INTERSTITIAL_VIDEO_PLACEMENT_ID']!;
         break;
     }
 

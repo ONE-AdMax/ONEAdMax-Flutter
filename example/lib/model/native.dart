@@ -1,3 +1,7 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+import '../const/oamPlacementIds.dart';
+
 sealed class MediationNative {
   final String placementId;
   final String factoryId;
@@ -5,24 +9,14 @@ sealed class MediationNative {
 
   MediationNative(this.placementId, this.factoryId);
 
-  factory MediationNative.pure() => PureNative('ONESTORE_NATIVE', 'plugin/native_widget');
-  factory MediationNative.adfit() => AdFitNative('xc68IecGCuJ0mHX', 'plugin/native_adfit_widget');
-  factory MediationNative.adfittemplate() => AdFitTemplateNative('xc68IecGCuJ0mHX', 'plugin/native_adfit_template_widget');
-  factory MediationNative.mobon() => MobonNative('acPNfTDu1Urdw56', 'plugin/native_mobon_widget');
-  factory MediationNative.applovin() => AppLovinNative('dwvg5nwfH33YgTy', 'plugin/native_applovin_widget');
+  factory MediationNative.pure() => PureNative(OamPlacementIds.NATIVE_ID, 'plugin/native_widget');
+  factory MediationNative.mobon() => MobonNative(dotenv.env['MOBON_NATIVE_PLACEMENT_ID']!, 'plugin/native_mobon_widget');
+  factory MediationNative.applovin() => AppLovinNative(dotenv.env['APPLOVIN_NATIVE_PLACEMENT_ID']!, 'plugin/native_applovin_widget');
 
 }
 
 class PureNative extends MediationNative {
   PureNative(super.placementId, super.factoryId);
-}
-
-class AdFitNative extends MediationNative {
-  AdFitNative(super.placementId, super.factoryId);
-}
-
-class AdFitTemplateNative extends MediationNative {
-  AdFitTemplateNative(super.placementId, super.factoryId);
 }
 
 class MobonNative extends MediationNative {

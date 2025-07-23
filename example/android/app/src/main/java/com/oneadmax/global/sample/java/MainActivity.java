@@ -2,8 +2,6 @@ package com.oneadmax.global.sample.java;
 
 import androidx.annotation.NonNull;
 
-import com.oneadmax.global.sample.java.factory.AdFitNativeTemplateViewFactory;
-import com.oneadmax.global.sample.java.factory.AdFitNativeViewFactory;
 import com.oneadmax.global.sample.java.factory.AppLovinNativeViewFactory;
 import com.oneadmax.global.sample.java.factory.MobonNativeViewFactory;
 import com.oneadmax.global.sample.java.factory.NativeTemplateViewFactory;
@@ -24,15 +22,6 @@ public class MainActivity extends FlutterActivity {
                 .registerViewFactory("plugin/native_widget", new NativeViewFactory(flutterEngine.getDartExecutor().getBinaryMessenger()));
 
         // mediation sample code
-
-        //AdFit
-        flutterEngine.getPlatformViewsController().getRegistry()
-                .registerViewFactory("plugin/native_adfit_widget", new AdFitNativeViewFactory(flutterEngine.getDartExecutor().getBinaryMessenger()));
-
-        //AdFIt Template
-        flutterEngine.getPlatformViewsController().getRegistry()
-                .registerViewFactory("plugin/native_adfit_template_widget", new AdFitNativeTemplateViewFactory(flutterEngine.getDartExecutor().getBinaryMessenger()));
-
 
         //Mobon
         flutterEngine.getPlatformViewsController().getRegistry()

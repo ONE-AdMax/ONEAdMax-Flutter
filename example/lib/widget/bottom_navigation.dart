@@ -52,7 +52,7 @@ class _OAMBottomNavigationState extends State<OAMBottomNavigation> {
         ),
         NavigationDestination(
           icon: Icon(Icons.interests_sharp),
-          label: 'Interstital',
+          label: 'Interstitial',
         ),
         NavigationDestination(
           icon: Icon(Icons.account_box),

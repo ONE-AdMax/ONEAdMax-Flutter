@@ -44,7 +44,7 @@ class NativePlatformViewModel extends StateNotifier<NativePlatformState> {
       case Mediation.mezzo:
         state = state.copyWith(isNotSupport: true);
         break;
-      case Mediation.caluly:
+      case Mediation.cauly:
         state = state.copyWith(isNotSupport: true);
         break;
       case Mediation.unityAds:
