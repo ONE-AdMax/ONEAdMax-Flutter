@@ -81,6 +81,16 @@ Register the app key issued from the ONE AdMax console:
 ```
 Note: In the example app, different ads are shown depending on the app key, so we use conditional branching for multiple keys.  
 However, in most cases, you only need to use a single app key when developing your own app.
+
+If you want to use your own appKey without modifying the example app’s code, please follow the steps below:
+1. Create a key.properties file under the example/android/ folder.
+2. Copy and paste the following content into the file:
+```
+APP_KEY=your app key
+APP_KEY_FOR_MEDIATION=you app key
+```
+3. Use the appKey issued from the ONE AdMax console.
+
 ---
 
 ##  Flutter/Dart Code Overview
@@ -95,7 +105,6 @@ The default entry point is `HomeScreen (/)`.
 Ads are provided through ONE AdMax (pure) and six different mediation partners.  
 Supported ad formats vary by mediation.
 
----
 
 ### Initialization and Shutdown
 
@@ -119,8 +128,44 @@ Ads are displayed on navigated screens based on the selected ad provider in `Hom
 
 ## Mediation
 
-If you are using mediation, you must register a Placement in the ONE AdMax console to receive a Placement ID.  
-In the example app, you can enter the issued Placement ID in the `assets/.env` file.
+If you are using mediation, you need to register a Placement in the ONE AdMax console to receive a Placement ID.
+In the example app, you can set the issued Placement ID as follows:
+1. Create a .env file under the example/assets/ folder.
+2. Copy and paste the following content.
+```properties
+MOBON_BANNER_PLACEMENT_ID_320_50=your placement id
+MOBON_BANNER_PLACEMENT_ID_320_100=your placement id
+MOBON_BANNER_PLACEMENT_ID_300_250=your placement id
+
+MEZZO_BANNER_PLACEMENT_ID_320_50=your placement id
+MEZZO_BANNER_PLACEMENT_ID_320_100=your placement id
+MEZZO_BANNER_PLACEMENT_ID_300_250=your placement id
+
+CAULY_BANNER_PLACEMENT_ID_320_50=your placement id
+CAULY_BANNER_PLACEMENT_ID_320_100=your placement id
+CAULY_BANNER_PLACEMENT_ID_300_250=your placement id
+
+UNITYADS_BANNER_PLACEMENT_ID_320_50=your placement id
+UNITYADS_BANNER_PLACEMENT_ID_320_100=your placement id
+UNITYADS_BANNER_PLACEMENT_ID_300_250=your placement id
+
+CAULY_INTERSTITIAL_PLACEMENT_ID=your placement id
+UNITYADS_INTERSTITIAL_PLACEMENT_ID=your placement id
+
+UNITYADS_INTERSTITIAL_VIDEO_PLACEMENT_ID=your placement id
+VUNGLE_INTERSTITIAL_VIDEO_PLACEMENT_ID=your placement id
+APPLOVIN_BIDDING_INTERSTITIAL_VIDEO_PLACEMENT_ID=your placement id
+APPLOVIN_WATERFALL_INTERSTITIAL_VIDEO_PLACEMENT_ID=your placement id
+
+UNITYADS_REWARD_VIDEO_PLACEMENT_ID=your placement id
+VUNGLE_REWARD_VIDEO_PLACEMENT_ID=your placement id
+APPLOVIN_BIDDING_REWARD_VIDEO_PLACEMENT_ID=your placement id
+APPLOVIN_WATERFALL_REWARD_VIDEO_PLACEMENT_ID=your placement id
+
+MOBON_NATIVE_PLACEMENT_ID=your placement id
+APPLOVIN_NATIVE_PLACEMENT_ID=your placement id
+```
+3. Enter the issued Placement ID in the appropriate fields.
 
 ## Ad Types Guide
 

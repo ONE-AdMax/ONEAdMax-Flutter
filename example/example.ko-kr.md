@@ -66,7 +66,7 @@ dependencies {
 ```
 
 ### 3. AndroidManifest.xml 설정
-ONE AdMax 콘솔에서 발급 받은 appkey를 AndroidManifest.xml에 등록합니다.
+ONE AdMax 콘솔에서 발급 받은 appKey를 AndroidManifest.xml에 등록합니다.
 ```xml
 <application>
     <meta-data
@@ -74,7 +74,18 @@ ONE AdMax 콘솔에서 발급 받은 appkey를 AndroidManifest.xml에 등록합�
         android:value="...your app key..." />
 </application>
 ```
-참고 : 예제앱은 appKey에 따라 설정된 광고가 달라서 두개를 분기하여 사용중입니다. 일반적으로 앱을 개발하실때는 하나로 사용하시면 됩니다.
+참고 : 예제앱은 appKey에 따라 설정된 광고가 달라서 두개를 분기하여 사용중입니다.   
+일반적으로 앱을 개발하실때는 하나로 사용하시면 됩니다.
+
+예제앱의 코드 수정 없이 appKey를 사용하려면 다음의 같이 진행해주세요.
+1. example/android/ 폴더 아래에 key.properties 파일 생성
+2. 파일에 다음의 내용을 복사/붙여넣기
+```
+APP_KEY=your app key
+APP_KEY_FOR_MEDIATION=you app key
+```
+3. ONE AdMax 콘솔에서 발급 받은 appKey를 기입하여 사용.
+
 ---
 
 ## Flutter/Dart 코드 설명
@@ -88,8 +99,6 @@ ONE AdMax 콘솔에서 발급 받은 appkey를 AndroidManifest.xml에 등록합�
 `HomeScreen`은 ONE AdMax를 초기화하고, 사용 가능한 광고를 리스트업합니다.  
 광고는 ONE AdMax(pure)와 6개의 mediation으로 제공됩니다.  
 각 mediation에 따라 지원되는 광고 형식이 다릅니다.
-
----
 
 ### 초기화 및 종료
 ONE AdMax 를 사용하기 위해서는 광고를 로드하기전에 초기화가 필요합니다.  
@@ -112,7 +121,43 @@ Home Screen에서 선택한 광고 제공사에 따라 네비게이션바로 이
 ## 미디에이션
 
 미디에이션을 사용하는 경우, ONE AdMax 콘솔에서 Placement를 등록하여 Id를 발급 받아야합니다.  
-예제앱에서는 발급 받은 Placement Id를 assets/.env 파일에 입력해주면 됩니다.
+예제앱에서는 발급 받은 Placement Id를 다음과 같이 지정해주면 됩니다.
+1. example/assets/ 폴더 아래에 .env 파일 생성
+2. 다음의 내용을 복사/붙여넣기.
+```properties
+MOBON_BANNER_PLACEMENT_ID_320_50=your placement id
+MOBON_BANNER_PLACEMENT_ID_320_100=your placement id
+MOBON_BANNER_PLACEMENT_ID_300_250=your placement id
+
+MEZZO_BANNER_PLACEMENT_ID_320_50=your placement id
+MEZZO_BANNER_PLACEMENT_ID_320_100=your placement id
+MEZZO_BANNER_PLACEMENT_ID_300_250=your placement id
+
+CAULY_BANNER_PLACEMENT_ID_320_50=your placement id
+CAULY_BANNER_PLACEMENT_ID_320_100=your placement id
+CAULY_BANNER_PLACEMENT_ID_300_250=your placement id
+
+UNITYADS_BANNER_PLACEMENT_ID_320_50=your placement id
+UNITYADS_BANNER_PLACEMENT_ID_320_100=your placement id
+UNITYADS_BANNER_PLACEMENT_ID_300_250=your placement id
+
+CAULY_INTERSTITIAL_PLACEMENT_ID=your placement id
+UNITYADS_INTERSTITIAL_PLACEMENT_ID=your placement id
+
+UNITYADS_INTERSTITIAL_VIDEO_PLACEMENT_ID=your placement id
+VUNGLE_INTERSTITIAL_VIDEO_PLACEMENT_ID=your placement id
+APPLOVIN_BIDDING_INTERSTITIAL_VIDEO_PLACEMENT_ID=your placement id
+APPLOVIN_WATERFALL_INTERSTITIAL_VIDEO_PLACEMENT_ID=your placement id
+
+UNITYADS_REWARD_VIDEO_PLACEMENT_ID=your placement id
+VUNGLE_REWARD_VIDEO_PLACEMENT_ID=your placement id
+APPLOVIN_BIDDING_REWARD_VIDEO_PLACEMENT_ID=your placement id
+APPLOVIN_WATERFALL_REWARD_VIDEO_PLACEMENT_ID=your placement id
+
+MOBON_NATIVE_PLACEMENT_ID=your placement id
+APPLOVIN_NATIVE_PLACEMENT_ID=your placement id
+```
+3. 발급 받은 Placement Id를 해당 하는 곳에 기입.
 
 ## 광고 유형별 가이드
 
