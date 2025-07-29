@@ -7,17 +7,10 @@ class BannerDetailScreen extends ConsumerStatefulWidget {
   const BannerDetailScreen({super.key});
 
   @override
-  ConsumerState createState() => _BannerDetailScreenState();
+  ConsumerState<BannerDetailScreen> createState() => _BannerDetailScreenState();
 }
 
 class _BannerDetailScreenState extends ConsumerState<BannerDetailScreen> {
-  late BannerDetailViewmodel _viewModel;
-
-  @override
-  void initState() {
-    super.initState();
-    _viewModel = ref.read(bannerDetailProvider.notifier);
-  }
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import '../const/oamPlacementIds.dart';
+import 'package:one_admax_flutter_example/const/oam_placement_ids.dart';
 
 sealed class MediationNative {
   final String placementId;
@@ -9,7 +9,7 @@ sealed class MediationNative {
 
   MediationNative(this.placementId, this.factoryId);
 
-  factory MediationNative.pure() => PureNative(OamPlacementIds.NATIVE_ID, 'plugin/native_widget');
+  factory MediationNative.pure() => PureNative(OamPlacementIds.nativeId, 'plugin/native_widget');
   factory MediationNative.mobon() => MobonNative(dotenv.env['MOBON_NATIVE_PLACEMENT_ID']!, 'plugin/native_mobon_widget');
   factory MediationNative.applovin() => AppLovinNative(dotenv.env['APPLOVIN_NATIVE_PLACEMENT_ID']!, 'plugin/native_applovin_widget');
 

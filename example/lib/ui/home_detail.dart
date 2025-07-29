@@ -9,7 +9,7 @@ class HomeDetailScreen extends ConsumerStatefulWidget {
   const HomeDetailScreen({super.key});
 
   @override
-  _HomeDetailState createState() => _HomeDetailState();
+  ConsumerState<HomeDetailScreen> createState() => _HomeDetailState();
 }
 
 class _HomeDetailState extends ConsumerState<HomeDetailScreen> {

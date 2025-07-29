@@ -2,14 +2,14 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
 
-import '../const/oamPlacementIds.dart';
+import 'package:one_admax_flutter_example/const/oam_placement_ids.dart';
 import '../model/mediation.dart';
 import 'mediation_viewmodel.dart';
 
 class InterstitialVideoState {
   final List<String> logList;
   final bool isLoading;
-  final isNotSupport;
+  final bool isNotSupport;
 
   InterstitialVideoState({
     this.logList = const [],
@@ -39,7 +39,7 @@ class InterstitialVideoViewModel extends StateNotifier<InterstitialVideoState> {
 
     switch (mediation) {
       case Mediation.pure:
-        interstitialVideoPlacementId = OamPlacementIds.INTERSTITIAL_VIDEO_ID;
+        interstitialVideoPlacementId = OamPlacementIds.interstitialVideoId;
         break;
       case Mediation.mobon:
         state = state.copyWith(isNotSupport: true);
@@ -108,7 +108,7 @@ class InterstitialVideoViewModel extends StateNotifier<InterstitialVideoState> {
 
   void onOpenFailed(OAMError admaxError) {
     _logEvent(
-        "onOpenFailed code : $admaxError.code, message : $admaxError.message");
+        "onOpenFailed code : ${admaxError.code}, message : ${admaxError.message}");
   }
 
   void _logEvent(String event) {

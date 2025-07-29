@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
+// ignore_for_file: constant_identifier_names
 @JsonEnum()
 enum OAMCloseEvent {
   UNKNOWN,

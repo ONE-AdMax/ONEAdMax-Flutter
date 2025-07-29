@@ -1,6 +1,6 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
-import 'package:one_admax_flutter_example/const/oamPlacementIds.dart';
+import 'package:one_admax_flutter_example/const/oam_placement_ids.dart';
 
 class Banner {
   final String title;
@@ -18,15 +18,15 @@ class Banner {
 final List<Banner> pureBanners = [
   Banner(
       title: "320x50",
-      placementId: OamPlacementIds.BANNER_ID_320x50,
+      placementId: OamPlacementIds.bannerId320x50,
       bannerSize: BannerSize.BANNER_320x50),
   Banner(
       title: "320x100",
-      placementId: OamPlacementIds.BANNER_ID_320x100,
+      placementId: OamPlacementIds.bannerId320x100,
       bannerSize: BannerSize.BANNER_320x100),
   Banner(
       title: "300x250",
-      placementId: OamPlacementIds.BANNER_ID_300x250,
+      placementId: OamPlacementIds.bannerId300x250,
       bannerSize: BannerSize.BANNER_300x250),
 ];
 

@@ -59,7 +59,6 @@ class NativePlatformViewModel extends StateNotifier<NativePlatformState> {
       case Mediation.applovinWaterfall:
         state = state.copyWith(isNotSupport: true);
         break;
-      default:
     }
   }
 

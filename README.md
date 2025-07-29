@@ -31,7 +31,7 @@ Alternatively, you can manually add the dependency to your pubspec.yaml:
 
 ```yaml
 dependencies:
-  one_admax_flutter: ^1.0.3
+  one_admax_flutter: ^1.0.4
 
 ```
 

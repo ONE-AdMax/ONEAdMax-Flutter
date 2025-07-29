@@ -27,7 +27,7 @@ class InterstitialExtras {
   Map<String, dynamic> toMap() {
     final Map<String, dynamic> data = {};
     if (backgroundColor != null) {
-      data['backgroundColor'] = "#${backgroundColor?.value.toRadixString(16).padLeft(8, '0')}";
+      data['backgroundColor'] = "#${backgroundColor?.toARGB32().toRadixString(16).padLeft(8, '0')}";
     }
     if (isHideCloseButton != false) {
       data['hideCloseBtn'] = isHideCloseButton;
@@ -96,7 +96,7 @@ class EndingText {
       data['endingTextSize'] = size;
     }
     if (color != null) {
-      data['endingTextColor'] = color?.value.toRadixString(16);
+      data['endingTextColor'] = color?.toARGB32().toRadixString(16);
     }
     if (align != null) {
       data['endingTextGravity'] = align?.toString();

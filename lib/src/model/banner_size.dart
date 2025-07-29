@@ -9,6 +9,7 @@ class BannerSize {
 
   const BannerSize({required this.width, required this.height, this.name});
 
+  // ignore_for_file: constant_identifier_names
   static const BannerSize BANNER_320x50 =
       BannerSize(width: 320, height: 50, name: 'BANNER_320x50');
   static const BannerSize BANNER_320x100 =

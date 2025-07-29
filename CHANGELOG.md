@@ -1,3 +1,8 @@
+## 1.0.4
+
+* Cauly SDK repository password updated.
+* Fixed minor code issues identified by static analysis.
+
 ## 1.0.3
 
 * Mediation compatibility update.

@@ -7,7 +7,7 @@ class InterstitialAdDetailScreen extends ConsumerStatefulWidget {
   const InterstitialAdDetailScreen({super.key});
 
   @override
-  _InterstitialAdDetailScreenState createState() =>
+  ConsumerState<InterstitialAdDetailScreen> createState() =>
       _InterstitialAdDetailScreenState();
 }
 

@@ -22,7 +22,7 @@ Cauly mediation을 사용하는 경우, 추가 저장소 설정이 필요합니�
         url = uri("https://maven.pkg.github.com/cauly/Android-SDK/SDK")
         credentials {
             username = 'cauly'
-            password = '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'
+            password = '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'
         }
     }
 ```

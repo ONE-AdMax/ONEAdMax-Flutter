@@ -1,5 +1,4 @@
 import 'package:flutter/services.dart';
-import 'package:one_admax_flutter/src/model/banner_mediation_config.dart';
 import '../../one_admax_flutter.dart';
 
 class BannerCallBackListener {

@@ -7,7 +7,7 @@ class InterstitialVideoDetailScreen extends ConsumerStatefulWidget {
   const InterstitialVideoDetailScreen({super.key});
 
   @override
-  _InterstitialVideoDetailScreenState createState() =>
+  ConsumerState<InterstitialVideoDetailScreen> createState() =>
       _InterstitialVideoDetailScreenState();
 }
 

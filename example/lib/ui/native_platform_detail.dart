@@ -9,7 +9,7 @@ class NativePlatformDetail extends ConsumerStatefulWidget {
   const NativePlatformDetail({super.key});
 
   @override
-  _NativePlatformDetailState createState() => _NativePlatformDetailState();
+  ConsumerState<NativePlatformDetail> createState() => _NativePlatformDetailState();
 }
 
 class _NativePlatformDetailState extends ConsumerState<NativePlatformDetail> {
@@ -49,7 +49,7 @@ class _NativePlatformDetailState extends ConsumerState<NativePlatformDetail> {
                           factoryId: state.mediationNative.factoryId,
                         ),
                       ),
-                ...state.logList.map((e) => _buildLog(e)).toList(),
+                ...state.logList.map((e) => _buildLog(e)),
               ],
             ),
     );

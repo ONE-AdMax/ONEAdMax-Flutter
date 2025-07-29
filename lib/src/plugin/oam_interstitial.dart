@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
-import 'package:one_admax_flutter/src/enum/oam_close_event.dart';
 
 class InterstitialCallBackListener {
   Function() onLoaded;

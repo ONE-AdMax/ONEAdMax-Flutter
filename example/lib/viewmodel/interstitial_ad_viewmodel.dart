@@ -3,7 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
 
-import '../const/oamPlacementIds.dart';
+import 'package:one_admax_flutter_example/const/oam_placement_ids.dart';
 import '../model/mediation.dart';
 import 'mediation_viewmodel.dart';
 
@@ -39,7 +39,7 @@ class InterstitialAdViewModel extends StateNotifier<InterstitialAdState> {
 
     switch (mediation) {
       case Mediation.pure:
-        interstitialPlacementId = OamPlacementIds.INTERSTITIAL_ID;
+        interstitialPlacementId = OamPlacementIds.interstitialId;
         break;
       case Mediation.mobon:
         state = state.copyWith(isNotSupport: true);

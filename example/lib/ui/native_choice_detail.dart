@@ -3,9 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:one_admax_flutter_example/viewmodel/mediation_viewmodel.dart';
 
-import '../model/native.dart';
 import '../model/mediation.dart';
-import '../viewmodel/native_platform_viewmodel.dart';
 import '../widget/choice_widget.dart';
 
 class NativeChoiceDetail extends ConsumerWidget {

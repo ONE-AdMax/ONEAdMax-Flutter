@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ChoiceWidget extends StatelessWidget {
-  String title;
-  String firstButtonTitle;
-  String secondButtonTitle;
-  Function() firstButtonClicked;
-  Function() secondButtonClicked;
+  final String title;
+  final String firstButtonTitle;
+  final String secondButtonTitle;
+  final Function() firstButtonClicked;
+  final Function() secondButtonClicked;
 
-  ChoiceWidget(
+  const ChoiceWidget(
       {super.key,
       required this.title,
       required this.firstButtonTitle,

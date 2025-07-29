@@ -1,7 +1,7 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
-import 'package:one_admax_flutter_example/const/oamPlacementIds.dart';
+import 'package:one_admax_flutter_example/const/oam_placement_ids.dart';
 import 'package:one_admax_flutter_example/model/mediation.dart';
 
 import 'mediation_viewmodel.dart';
@@ -14,7 +14,7 @@ class RewardDetailViewModel extends StateNotifier<RewardDetailState> {
 
     switch (mediation) {
       case Mediation.pure:
-        rewardPlacementId = OamPlacementIds.REWARD_ID;
+        rewardPlacementId = OamPlacementIds.rewardId;
         break;
       case Mediation.mobon:
         state = state.copyWith(isNotSupport: true);
@@ -68,8 +68,7 @@ class RewardDetailViewModel extends StateNotifier<RewardDetailState> {
   }
 
   void onLoadFailed(OAMError admaxError) {
-    _logEvent("onLoadFailed${admaxError.code}${admaxError.message}");
-
+    _logEvent("onLoadFailed code:${admaxError.code}, message:${admaxError.message}");
     state = state.copyWith(isLoading: false);
   }
 
@@ -84,7 +83,7 @@ class RewardDetailViewModel extends StateNotifier<RewardDetailState> {
 
   void onOpenFailed(OAMError admaxError) {
     _logEvent(
-        "onOpenFailed code : $admaxError.code, message : $admaxError.message");
+        "onOpenFailed code : ${admaxError.code}, message : ${admaxError.message}");
   }
 
   void onOpened() {

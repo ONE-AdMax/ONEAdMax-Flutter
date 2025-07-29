@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 class MyErrorWidget extends StatelessWidget {
   const MyErrorWidget({super.key});
 
@@ -52,6 +52,5 @@ class MyErrorWidget extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

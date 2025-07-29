@@ -7,7 +7,7 @@ class RewardDetailScreen extends ConsumerStatefulWidget {
   const RewardDetailScreen({super.key});
 
   @override
-  _RewardDetailScreenState createState() => _RewardDetailScreenState();
+  ConsumerState<RewardDetailScreen> createState() => _RewardDetailScreenState();
 }
 
 class _RewardDetailScreenState extends ConsumerState<RewardDetailScreen>

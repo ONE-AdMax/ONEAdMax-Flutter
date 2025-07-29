@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:one_admax_flutter/one_admax_flutter.dart';
-import 'package:one_admax_flutter_example/const/oamPlacementIds.dart';
+import 'package:one_admax_flutter_example/const/oam_placement_ids.dart';
 import 'package:one_admax_flutter_example/widget/banner_header.dart';
 
 class NativeTemplateDetail extends StatefulWidget {
@@ -22,20 +22,20 @@ class _NativeTemplateDetailState extends State<NativeTemplateDetail> {
       ),
       body: ListView(children: [
         ...nativeTemplateDetail(
-            OamPlacementIds.NATIVE_TEMPLATE_1, 'plugin/native_template_widget'),
+            OamPlacementIds.nativeTemplate1, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            OamPlacementIds.NATIVE_TEMPLATE_2, 'plugin/native_template_widget'),
+            OamPlacementIds.nativeTemplate2, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            OamPlacementIds.NATIVE_TEMPLATE_3, 'plugin/native_template_widget'),
+            OamPlacementIds.nativeTemplate3, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            OamPlacementIds.NATIVE_TEMPLATE_4, 'plugin/native_template_widget'),
+            OamPlacementIds.nativeTemplate4, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            OamPlacementIds.NATIVE_TEMPLATE_5, 'plugin/native_template_widget'),
+            OamPlacementIds.nativeTemplate5, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            OamPlacementIds.NATIVE_TEMPLATE_6, 'plugin/native_template_widget'),
+            OamPlacementIds.nativeTemplate6, 'plugin/native_template_widget'),
         ...nativeTemplateDetail(
-            OamPlacementIds.NATIVE_TEMPLATE_7, 'plugin/native_template_widget'),
-        ..._logList.map((e) => _buildLog(e)).toList(),
+            OamPlacementIds.nativeTemplate7, 'plugin/native_template_widget'),
+        ..._logList.map((e) => _buildLog(e)),
       ]),
     );
   }
