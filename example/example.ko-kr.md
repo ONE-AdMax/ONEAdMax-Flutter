@@ -30,14 +30,14 @@ Cauly mediation을 사용하는 경우, 추가 저장소 설정이 필요합니�
 ### 2. `build.gradle (app)` 설정
 ```groovy
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.2.2'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.2.3'
 }
 ```
 
 mediation을 사용하는 경우, 각각에 대한 의존성도 추가해야 합니다.  
 MezzoMedia는 JAR 파일로 직접 추가합니다.  
 ※ ONE AdMax와 mediation SDK 버전이 불일치하면 오류가 발생할 수 있습니다.  
-아래는 ONE AdMax v1.2.2에 호환되는 mediation version 입니다.
+아래는 ONE AdMax v1.2.3에 호환되는 mediation version 입니다.
 
 ```groovy
 dependencies {
@@ -47,7 +47,7 @@ dependencies {
     // Cauly
     api 'com.google.android.gms:play-services-ads-identifier:17.0.0'
     api 'com.google.android.gms:play-services-appset:16.0.0'
-    api 'com.fsn.cauly:cauly-sdk:3.5.35'
+    api 'com.fsn.cauly:cauly-sdk:3.5.39'
 
     // Mobon
     api('io.github.mobon:mobonSDK:1.0.0.65') {
@@ -55,7 +55,7 @@ dependencies {
     }
 
     // UnityAds
-    api 'com.unity3d.ads:unity-ads:4.14.1'
+    api 'com.unity3d.ads:unity-ads:4.16.5'
 
     // MezzoMedia. manlibrary_v3.0.0_20250210.jar v300
     implementation files('libs/manlibrary_v3.0.0_20250210.jar')

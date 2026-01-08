@@ -33,14 +33,14 @@ maven {
 
 ```groovy
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.2.2'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.2.3'
 }
 ```
 
 If you plan to use mediation, you also need to add dependencies for each mediation.  
 (MezzoMedia requires a JAR file to be added manually.)  
 ⚠️ Please note that mismatched versions between ONE AdMax and mediation SDKs may result in errors.  
-Below are the compatible mediation versions for ONE AdMax v1.2.2:
+Below are the compatible mediation versions for ONE AdMax v1.2.3:
 
 ```groovy
 dependencies {
@@ -50,7 +50,7 @@ dependencies {
     // Cauly
     api 'com.google.android.gms:play-services-ads-identifier:17.0.0'
     api 'com.google.android.gms:play-services-appset:16.0.0'
-    api 'com.fsn.cauly:cauly-sdk:3.5.35'
+    api 'com.fsn.cauly:cauly-sdk:3.5.39'
 
     // Mobon
     api('io.github.mobon:mobonSDK:1.0.0.65') {
@@ -58,7 +58,7 @@ dependencies {
     }
 
     // UnityAds
-    api 'com.unity3d.ads:unity-ads:4.14.1'
+    api 'com.unity3d.ads:unity-ads:4.16.5'
 
     // MezzoMedia. manlibrary_v3.0.0_20250210.jar v300
     implementation files('libs/manlibrary_v3.0.0_20250210.jar')

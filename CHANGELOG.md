@@ -1,3 +1,10 @@
+## 1.0.5
+
+* Improved mediation stability.
+* Integrated mediation versions:
+  * Cauly: v3.5.39
+  * Unity Ads: v4.16.5
+
 ## 1.0.4
 
 * Cauly SDK repository password updated.

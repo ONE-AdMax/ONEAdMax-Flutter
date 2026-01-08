@@ -1,6 +1,6 @@
 name: one_admax_flutter
 description: "Flutter plugin for OneStore AdMax SDK, supporting banner, interstitial (full-screen),  rewarded and native ads"
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/ONE-AdMax/ONEAdMax-Flutter
 
 environment:
