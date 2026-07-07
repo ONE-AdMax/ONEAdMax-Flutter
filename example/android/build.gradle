@@ -3,11 +3,6 @@ allprojects {
         google()
         mavenCentral()
 
-        // OneStore SDK repository (needed for com.oneadmax.sdk:sdk-ads)
-        maven {
-            url "https://repo.onestore.co.kr/repository/onestore-sdk-public"
-        }
-
         // Cauly SDK repository (for mediation)
         maven { url 'https://cauly.github.io/cauly-sdk-android-maven/maven-repo' }
 

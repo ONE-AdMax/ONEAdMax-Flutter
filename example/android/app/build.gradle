@@ -76,7 +76,7 @@ flutter {
 }
 
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.2.3'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.2.5'
 
     // mediation sample
     // native ad는 applovin, mobon 만 지원한다.

@@ -31,19 +31,21 @@ Alternatively, you can manually add the dependency to your pubspec.yaml:
 
 ```yaml
 dependencies:
-  one_admax_flutter: ^1.0.5
+  one_admax_flutter: ^1.0.6
 
 ```
 
 After updating your pubspec.yaml, run flutter pub get to install the package.
 
 #### 2. Modify build.gradle
-In your project-level build.gradle, add the following Maven repository:
+The ONE AdMax SDK is distributed via Maven Central. Make sure your project-level
+build.gradle includes it:
 
 ```groovy
 allprojects {
   repositories {
-    maven { url 'https://repo.onestore.net/repository/onestore-sdk-public' }
+    google()
+    mavenCentral()
   }
 }
 

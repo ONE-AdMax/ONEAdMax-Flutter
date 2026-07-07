@@ -4,14 +4,14 @@
 
 ### 1. `build.gradle (project)`
 
-To use the ONE AdMax SDK, add the following repository:
+The ONE AdMax SDK is distributed via Maven Central. Make sure your project-level
+`build.gradle` includes it:
 
 ```groovy
 allprojects {
     repositories {
-        maven {
-            url "https://repo.onestore.co.kr/repository/onestore-sdk-public"
-        }
+        google()
+        mavenCentral()
     }
 }
 ```
@@ -33,14 +33,14 @@ maven {
 
 ```groovy
 dependencies {
-    implementation 'com.oneadmax.sdk:sdk-ads:1.2.3'
+    implementation 'com.oneadmax.sdk:sdk-ads:1.2.5'
 }
 ```
 
 If you plan to use mediation, you also need to add dependencies for each mediation.  
 (MezzoMedia requires a JAR file to be added manually.)  
 ⚠️ Please note that mismatched versions between ONE AdMax and mediation SDKs may result in errors.  
-Below are the compatible mediation versions for ONE AdMax v1.2.3:
+Below are the compatible mediation versions for ONE AdMax v1.2.5:
 
 ```groovy
 dependencies {

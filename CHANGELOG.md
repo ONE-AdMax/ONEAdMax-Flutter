@@ -1,3 +1,9 @@
+## 1.0.6
+
+* Updated ONE AdMax SDK to v1.2.5.
+* AGP 9.0 compatibility: internal namespace updated (com.oneadmax.global → com.oneadmax.global.ads). No public API changes.
+* SDK repository moved to Maven Central.
+
 ## 1.0.5
 
 * Improved mediation stability.
